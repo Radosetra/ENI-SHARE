@@ -17,8 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/votes', 'App\Http\Controllers\VoteController@vote');
-Route::get('/votes/{post_id}', 'App\Http\Controllers\VoteController@getVotes');
+
 
 
 Route::middleware([

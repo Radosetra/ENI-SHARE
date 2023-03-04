@@ -30,6 +30,8 @@ Route::resource('comments', 'App\Http\Controllers\CommentController');
 
 
 //Vote
+Route::post('/votes', 'App\Http\Controllers\VoteController@vote');
+Route::get('/votes/{post_id}', 'App\Http\Controllers\VoteController@getVotes');
 
 
 
