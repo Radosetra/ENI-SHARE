@@ -30,7 +30,7 @@ Route::resource('publications', PublicationController::class);
 // Route::get('/publications/{id}/comments', 'CommentController@index');
 // Route::post('/comments', 'CommentController@store');
 Route::get('/publications/{pub_id}/comments', [CommentController::class, 'index'])->name('publications.comments');
-Route::post('/comments/create', [CommentController::class, 'create'])->name('comments.create');
+Route::post('/comments/create', [CommentController::class, 'create']);
 
 
 

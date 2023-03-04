@@ -10,8 +10,6 @@ use Illuminate\Support\Facades\Validator;
 class CommentController extends Controller
 {
 
-
-
     public function index($pub_id)
     {
         // Récupération des commentaires qui correspondent à la publication donnée
@@ -23,35 +21,69 @@ class CommentController extends Controller
             'data' => $comments,
         ]);
     }
+
     public function create(Request $request)
     {
-        // Validation des données du formulaire de commentaire
-        $validator = Validator::make($request->all(), [
-            'pub_id' => 'required|integer',
-            'content' => 'required|string|max:255',
-        ]);
+        // Get data from form
+        $content = $request->input('content');
+        $user_id = $request->input('user_id');
+        $pub_id = $request->input('pub_id');
 
-        // Si la validation échoue, renvoyer une réponse JSON d'erreur
-        if ($validator->fails()) {
-            return response()->json([
-                'success' => false,
-                'message' => 'Erreur de validation',
-                'errors' => $validator->errors(),
-            ], 422);
-        }
-
-        // Création d'un nouveau commentaire avec les données validées
+        // Create new comment
         $comment = new Comment;
-        $comment->user_id = Auth::id(); // Obtention de l'ID de l'utilisateur connecté
-        $comment->pub_id = $request->input('pub_id');
-        $comment->content = $request->input('content');
+        $comment->content = $content;
+        $comment->comment_date = now(); // Current date and time
+        $comment->user_id = $user_id;
+        $comment->pub_id = $pub_id;
         $comment->save();
 
-        // Renvoyer une réponse JSON avec les détails du commentaire créé
-        return response()->json([
-            'success' => true,
-            'message' => 'Commentaire créé avec succès',
-            'data' => $comment,
-        ], 201);
+        // Redirect to corresponding article page
+        return redirect('/publications/' . $pub_id);
     }
+
+    // public function edit(Request $request, $com_id)
+    // {
+    //     // Get comment to edit
+    //     $comment = Comment::find($com_id);
+
+    //     // Check if comment exists
+    //     if (!$comment) {
+    //         abort(404);
+    //     }
+
+    //     // Check if user has permission to edit comment
+    //     if ($comment->user_id != $request->user()->id) {
+    //         abort(403, 'You are not authorized to edit this comment.');
+    //     }
+
+    //     // Update comment content
+    //     $comment->content = $request->input('content');
+    //     $comment->save();
+
+    //     // Redirect to corresponding article page
+    //     return redirect('/publications/' . $comment->pub_id);
+    // }
+
+    // public function delete(Request $request, $com_id)
+    // {
+    //     // Get comment to delete
+    //     $comment = Comment::find($com_id);
+
+    //     // Check if comment exists
+    //     if (!$comment) {
+    //         abort(404);
+    //     }
+
+    //     // Check if user has permission to delete comment
+    //     if ($comment->user_id != $request->user()->id) {
+    //         abort(403, 'You are not authorized to delete this comment.');
+    //     }
+
+    //     // Delete comment
+    //     $comment->delete();
+
+    //     // Redirect to corresponding article page
+    //     return redirect('/publications/' . $comment->article_id);
+    // }
 }
+
