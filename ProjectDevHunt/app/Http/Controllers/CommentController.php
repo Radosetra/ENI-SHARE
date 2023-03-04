@@ -22,6 +22,92 @@ class CommentController extends Controller
         ]);
     }
 
-    
+    public function create(Request $request)
+    {
+        // Get data from request
+        $content = $request->input('content');
+        $user_id = $request->input('user_id');
+        $pub_id = $request->input('pub_id');
+
+        // Create new comment
+        $comment = new Comment;
+        $comment->content = $content;
+        $comment->created_at = now(); // Current date and time
+        $comment->user_id = $user_id;
+        $comment->pub_id = $pub_id;
+        $comment->save();
+
+        // Return success response with created comment data
+        return response()->json([
+            'status' => 'success',
+            'message' => 'Comment created successfully.',
+            'data' => $comment
+        ]);
+    }
+
+    public function edit(Request $request, $com_id)
+    {
+        // Get comment to edit
+        $comment = Comment::find($com_id);
+
+        // Check if comment exists
+        if (!$comment) {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Comment not found.'
+            ], 404);
+        }
+
+        // Check if user has permission to edit comment
+        if ($comment->user_id != $request->user()->id) {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'You are not authorized to edit this comment.'
+            ], 403);
+        }
+
+        // Update comment content
+        $comment->content = $request->input('content');
+        $comment->save();
+
+        // Return success response with updated comment data
+        return response()->json([
+            'status' => 'success',
+            'message' => 'Comment updated successfully.',
+            'data' => $comment
+        ]);
+    }
+
+    public function delete(Request $request, $com_id)
+    {
+        // Get comment to delete
+        $comment = Comment::find($com_id);
+
+        // Check if comment exists
+        if (!$comment) {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Comment not found.'
+            ], 404);
+        }
+
+        // Check if user has permission to delete comment
+        if ($comment->user_id != $request->user()->id) {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'You are not authorized to delete this comment.'
+            ], 403);
+        }
+
+        // Delete comment
+        $comment->delete();
+
+        // Return success response
+        return response()->json([
+            'status' => 'success',
+            'message' => 'Comment deleted successfully.'
+        ]);
+    }
 }
+
 
