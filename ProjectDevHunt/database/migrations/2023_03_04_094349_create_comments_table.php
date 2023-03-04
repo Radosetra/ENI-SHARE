@@ -9,15 +9,14 @@ class CreateCommentsTable extends Migration
     public function up()
     {
         Schema::create('comments', function (Blueprint $table) {
-            $table->id();
-            $table->string('com_id');
+            $table->string('com_id')->unique();
             $table->string('pub_id');
             $table->string('user_id');
             $table->text('content');
             $table->timestamps();
 
-            $table->foreign('pub_id')->references('id')->on('publications')->onDelete('cascade');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('pub_id')->references('pub_id')->on('publications')->onDelete('cascade');
+            $table->foreign('user_id')->references('user_id')->on('users')->onDelete('cascade');
         });
     }
 
@@ -26,3 +25,4 @@ class CreateCommentsTable extends Migration
         Schema::dropIfExists('comments');
     }
 }
+
