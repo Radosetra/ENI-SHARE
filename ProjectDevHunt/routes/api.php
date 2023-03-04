@@ -26,7 +26,8 @@ Route::resource('publications', 'App\Http\Controllers\PublicationController');
 //Comment
 // Route::get('/publications/{id}/comments', 'CommentController@index');
 // Route::post('/comments', 'CommentController@store');
-Route::resource('comments', 'App\Http\Controllers\CommentController');
+Route::get('/comments', 'App\Http\Controllers\CommentController@index');
+Route::post('/comments', 'App\Http\Controllers\CommentController@store');
 
 
 //Vote

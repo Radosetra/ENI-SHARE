@@ -8,31 +8,36 @@ use App\Models\Comment;
 
 class CommentController extends Controller
 {
-    public function index($id)
+    public function index($pub_id)
     {
-        // Récupérer la publication associée aux commentaires
-        $publication = Publication::findOrFail($id);
+        // Retrieve the publication with the specified ID
+        $publication = Publication::find($pub_id);
 
-        // Récupérer tous les commentaires associés à la publication
+        if (!$publication) {
+            // If the publication doesn't exist, return an error message
+            return response()->json(['error' => 'Publication not found'], 404);
+        }
+
+        // Retrieve all comments associated with the publication
         $comments = $publication->comments;
 
-        // Retourner une réponse JSON avec la liste des commentaires
+        // Return the comments as JSON
         return response()->json(['comments' => $comments]);
     }
 
     public function store(Request $request)
     {
-        // Valider les données du formulaire de commentaire
+        // Validate the comment data from the form
         $validatedData = $request->validate([
             'content' => 'required',
             'user_id' => 'required',
             'pub_id' => 'required',
         ]);
 
-        // Créer un nouveau commentaire
+        // Create a new comment
         $comment = Comment::create($validatedData);
 
-        // Retourner une réponse JSON avec l'ID du nouveau commentaire
-        return response()->json(['comment_id' => $comment->id]);
+        // Return the new comment's ID as JSON
+        return response()->json(['comment_id' => $comment->com_id]);
     }
 }

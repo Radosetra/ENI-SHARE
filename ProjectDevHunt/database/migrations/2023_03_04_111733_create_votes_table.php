@@ -15,7 +15,7 @@ return new class extends Migration
             $table->string('vote_id');
             $table->string('user_id');
             $table->string('pub_id');
-            $table->string('type');
+            $table->boolean('type');
             $table->timestamps();
 
             $table->foreign('user_id')
