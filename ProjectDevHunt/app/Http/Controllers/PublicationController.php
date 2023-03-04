@@ -12,8 +12,10 @@ class PublicationController extends Controller
         // Récupérer toutes les publications
         $publications = Publication::all();
 
-        // Afficher la vue avec la liste des publications
-        return view('publications.index', compact('publications'));
+        // Renvoyer les données au format JSON
+        return response()->json([
+            'publications' => $publications
+        ]);
     }
 
     public function show($id)
@@ -24,8 +26,11 @@ class PublicationController extends Controller
         // Récupérer tous les commentaires associés à la publication
         $comments = $publication->answers;
 
-        // Afficher la vue avec les détails de la publication et la liste des commentaires
-        return view('publications.show', compact('publication', 'comments'));
+        // Renvoyer les données au format JSON
+        return response()->json([
+            'publication' => $publication,
+            'comments' => $comments
+        ]);
     }
 
 }
