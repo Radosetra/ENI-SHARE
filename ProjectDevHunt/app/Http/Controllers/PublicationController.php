@@ -38,10 +38,17 @@ class PublicationController extends Controller
         return response()->json($publications,200);
     }
 
+<<<<<<< HEAD
     // afficher un formulaire pour créer une nouvelle publication
     public function create()
     {
         // Any route
+=======
+        // Renvoyer les données au format JSON
+        return response()->json([
+            'publications' => $publications
+        ]);
+>>>>>>> d3a4f6f76c6111b466c74c793ca129bd39d090c6
     }
 
     // enregistrer une nouvelle publication
@@ -94,6 +101,7 @@ class PublicationController extends Controller
         return view('publications.edit', compact('publication'));
     }
 
+<<<<<<< HEAD
     // mettre à jour une publication existante
     public function update(Request $request, $id)
     {
@@ -120,4 +128,12 @@ class PublicationController extends Controller
         return response()->json('Delete successfully',200);
     }
     
+=======
+        // Renvoyer les données au format JSON
+        return response()->json([
+            'publication' => $publication,
+            'comments' => $comments
+        ]);
+    }
+>>>>>>> d3a4f6f76c6111b466c74c793ca129bd39d090c6
 }

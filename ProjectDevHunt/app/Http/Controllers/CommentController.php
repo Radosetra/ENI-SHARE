@@ -16,8 +16,8 @@ class CommentController extends Controller
         // Récupérer tous les commentaires associés à la publication
         $comments = $publication->comments;
 
-        // Afficher la vue avec la liste des commentaires
-        return view('comments.index', compact('comments'));
+        // Retourner une réponse JSON avec la liste des commentaires
+        return response()->json(['comments' => $comments]);
     }
 
     public function store(Request $request)
@@ -32,9 +32,7 @@ class CommentController extends Controller
         // Créer un nouveau commentaire
         $comment = Comment::create($validatedData);
 
-        // Rediriger vers la page de la publication associée aux commentaires
-        return redirect()->route('publications.show', $comment->pub_id);
+        // Retourner une réponse JSON avec l'ID du nouveau commentaire
+        return response()->json(['comment_id' => $comment->id]);
     }
 }
-
-
