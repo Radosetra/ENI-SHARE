@@ -21,7 +21,7 @@ class Publication extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function answers(){
+    public function comments(){
         return $this->hasMany(Comment::class);
     }
 
