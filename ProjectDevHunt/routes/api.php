@@ -2,6 +2,9 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CommentController;
+use App\Http\Controllers\PublicationController;
+use App\Http\Controllers\VoteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,19 +23,19 @@ use Illuminate\Support\Facades\Route;
 // Route::post('/publications', 'PublicationController@store');
 // Route::get('/publications/{id}', 'PublicationController@show');
 // Route::delete('/publications/{id}', 'PublicationController@destroy');
-Route::put('/publications/{id}', 'App\Http\Controllers\PublicationController@store');
-Route::resource('publications', 'App\Http\Controllers\PublicationController');
+Route::put('/publications/{id}', [PublicationController::class, 'store']);
+Route::resource('publications', PublicationController::class);
 
 //Comment
 // Route::get('/publications/{id}/comments', 'CommentController@index');
 // Route::post('/comments', 'CommentController@store');
-Route::get('/comments', 'App\Http\Controllers\CommentController@index');
-Route::post('/comments', 'App\Http\Controllers\CommentController@store');
+Route::get('/comments', [CommentController::class, 'index']);
+Route::post('/comments', [CommentController::class, 'store']);
 
 
 //Vote
-Route::post('/votes', 'App\Http\Controllers\VoteController@vote');
-Route::get('/votes/{post_id}', 'App\Http\Controllers\VoteController@getVotes');
+Route::get('/votes/{post_id}', [VoteController::class, 'index']);
+Route::post('/votes', [VoteController::class, 'store']);
 
 
 

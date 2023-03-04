@@ -7,8 +7,14 @@ use Illuminate\Http\Request;
 
 class VoteController extends Controller
 {
+    public function index($postId)
+    {
+        $votes = Vote::where('post_id', $postId)->count();
+        
+        return response()->json(['votes' => $votes]);
+    }
     //
-    public function vote(Request $request)
+    public function store(Request $request)
     {
         $userId = $request->input('user_id');
         $postId = $request->input('post_id');
@@ -21,12 +27,6 @@ class VoteController extends Controller
         return response()->json(['success' => true]);
     }
 
-    public function getVotes($postId)
-    {
-        $votes = Vote::where('post_id', $postId)->count();
-        
-        return response()->json(['votes' => $votes]);
-    }
 
 }
 
