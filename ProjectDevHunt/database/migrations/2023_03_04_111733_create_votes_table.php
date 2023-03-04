@@ -15,11 +15,11 @@ return new class extends Migration
             $table->string('vote_id');
             $table->string('user_id');
             $table->string('pub_id');
-            $tabe->string('type');
+            $table->string('type');
             $table->timestamps();
 
             $table->foreign('user_id')
-          ->references('id')
+          ->references('user_id')
           ->on('users')
           ->onDelete('cascade');
 
