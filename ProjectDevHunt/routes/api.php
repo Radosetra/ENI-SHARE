@@ -19,8 +19,8 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/publications', 'PublicationController@index');
 // Route::post('/publications', 'PublicationController@store');
 // Route::get('/publications/{id}', 'PublicationController@show');
-// Route::put('/publications/{id}', 'PublicationController@update');
 // Route::delete('/publications/{id}', 'PublicationController@destroy');
+Route::put('/publications/{id}', 'App\Http\Controllers\PublicationController@store');
 Route::resource('publications', 'App\Http\Controllers\PublicationController');
 
 //Comment
