@@ -37,8 +37,9 @@ Route::delete('/comments/{com_id}', [CommentController::class, 'delete'])->middl
 
 
 //Vote
-Route::get('/votes/{post_id}', [VoteController::class, 'index']);
-Route::post('/votes', [VoteController::class, 'store']);
+Route::get('/posts/{postId}/votes', 'App\Http\Controllers\VoteController@index');
+
+Route::post('votes', [VoteController::class, 'store']);
 
 
 
