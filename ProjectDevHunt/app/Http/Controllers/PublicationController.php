@@ -32,5 +32,4 @@ class PublicationController extends Controller
             'comments' => $comments
         ]);
     }
-
 }
