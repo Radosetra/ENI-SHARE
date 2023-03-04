@@ -19,7 +19,7 @@ class VoteController extends Controller
         $userId = $request->input('user_id');
         $postId = $request->input('post_id');
         
-        $vote = new Vote();
+        $vote = new Vote(); 
         $vote->user_id = $userId;
         $vote->post_id = $postId;
         $vote->save();

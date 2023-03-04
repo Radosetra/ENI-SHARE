@@ -2,42 +2,56 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\Publication;
 use App\Models\Comment;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 
 class CommentController extends Controller
 {
+
+
+
     public function index($pub_id)
     {
-        // Retrieve the publication with the specified ID
-        $publication = Publication::find($pub_id);
+        // Récupération des commentaires qui correspondent à la publication donnée
+        $comments = Comment::where('pub_id', $pub_id)->get();
 
-        if (!$publication) {
-            // If the publication doesn't exist, return an error message
-            return response()->json(['error' => 'Publication not found'], 404);
-        }
-
-        // Retrieve all comments associated with the publication
-        $comments = $publication->comments;
-
-        // Return the comments as JSON
-        return response()->json(['comments' => $comments]);
+        // Renvoyer une réponse JSON avec les commentaires récupérés
+        return response()->json([
+            'success' => true,
+            'data' => $comments,
+        ]);
     }
-
-    public function store(Request $request)
+    public function create(Request $request)
     {
-        // Validate the comment data from the form
-        $validatedData = $request->validate([
-            'content' => 'required',
-            'user_id' => 'required',
-            'pub_id' => 'required',
+        // Validation des données du formulaire de commentaire
+        $validator = Validator::make($request->all(), [
+            'pub_id' => 'required|integer',
+            'content' => 'required|string|max:255',
         ]);
 
-        // Create a new comment
-        $comment = Comment::create($validatedData);
+        // Si la validation échoue, renvoyer une réponse JSON d'erreur
+        if ($validator->fails()) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Erreur de validation',
+                'errors' => $validator->errors(),
+            ], 422);
+        }
 
-        // Return the new comment's ID as JSON
-        return response()->json(['comment_id' => $comment->com_id]);
+        // Création d'un nouveau commentaire avec les données validées
+        $comment = new Comment;
+        $comment->user_id = Auth::id(); // Obtention de l'ID de l'utilisateur connecté
+        $comment->pub_id = $request->input('pub_id');
+        $comment->content = $request->input('content');
+        $comment->save();
+
+        // Renvoyer une réponse JSON avec les détails du commentaire créé
+        return response()->json([
+            'success' => true,
+            'message' => 'Commentaire créé avec succès',
+            'data' => $comment,
+        ], 201);
     }
 }

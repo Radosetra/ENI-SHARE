@@ -29,8 +29,9 @@ Route::resource('publications', PublicationController::class);
 //Comment
 // Route::get('/publications/{id}/comments', 'CommentController@index');
 // Route::post('/comments', 'CommentController@store');
-Route::get('/comments', [CommentController::class, 'index']);
-Route::post('/comments', [CommentController::class, 'store']);
+Route::get('/publications/{pub_id}/comments', [CommentController::class, 'index'])->name('publications.comments');
+Route::post('/comments/create', [CommentController::class, 'create'])->name('comments.create');
+
 
 
 //Vote
