@@ -8,10 +8,14 @@ use App\Http\Controllers\PublicationTagController;
 use App\Http\Controllers\UserSkillController;
 use App\Http\Controllers\UserController;
 
+
 Route::get('/', function () {
-    return view('admin');
+    return view('welcome');
 });
 
+Route::get('/auth/admin', function (){
+    return view('admin');
+})->middleware(['auth']);
 
 // users
 Route::get('/users', [UserController::class, 'index']);
