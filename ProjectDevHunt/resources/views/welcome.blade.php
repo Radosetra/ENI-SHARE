@@ -184,16 +184,20 @@
                     <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="400">
                         <div class="service-item position-relative">
                             <div class="icon"><i class="bi bi-calendar4-week icon"></i></div>
-                            <h4><a href="" class="stretched-link">Magni Dolores</a></h4>
-                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+                            <h4><a href="" class="stretched-link">Partage d'opportunité</a></h4>
+                            <p>Cette plateforme vous offre le privilège de partager les opportunités professionelles ou
+                                universitaires comme les offres de stages...
+                            </p>
                         </div>
                     </div><!-- End Service Item -->
 
                     <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="600">
                         <div class="service-item position-relative">
                             <div class="icon"><i class="bi bi-broadcast icon"></i></div>
-                            <h4><a href="" class="stretched-link">Nemo Enim</a></h4>
-                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+                            <h4><a href="" class="stretched-link">Connectivité</a></h4>
+                            <p>ENI-Share offre la connectivité entre étudiants de l'ENI et met en relief la
+                                fratérnité et la productivité au sein de toutes les étudiants...
+                            </p>
                         </div>
                     </div><!-- End Service Item -->
 
