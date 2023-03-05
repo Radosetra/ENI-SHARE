@@ -16,7 +16,7 @@ Route::post('/publications/search', [PublicationController::class, 'search']);
 
 // //Comment
 Route::get('/publications/{pub_id}/comments', [CommentController::class, 'index'])->name('publications.comments');
-Route::post('/comments', [CommentController::class, 'create']);
+Route::post('/comments', [CommentController::class, 'store']);
 Route::put('/comments/{com_id}', [CommentController::class, 'edit'])->middleware('auth:api');
 Route::delete('/comments/{com_id}', [CommentController::class, 'delete'])->middleware('auth:api');
 
