@@ -12,8 +12,8 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
 
     <!-- Favicons -->
-    <link href="LandingPage/assets/img/favicon.png" rel="icon">
-    <link href="LandingPage/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,23 +21,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
 
     <!-- Vendor CSS Files -->
-    <link href="LandingPage/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="LandingPage/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="LandingPage/assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="LandingPage/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="LandingPage/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
     <!-- Variables CSS Files. Uncomment your preferred color scheme -->
-    <link href="LandingPage/assets/css/variables.css" rel="stylesheet">
-    <!-- <link href="LandingPage/assets/css/variables-blue.css" rel="stylesheet"> -->
-    <!-- <link href="LandingPage/assets/css/variables-green.css" rel="stylesheet"> -->
-    <!-- <link href="LandingPage/assets/css/variables-orange.css" rel="stylesheet"> -->
-    <!-- <link href="LandingPage/assets/css/variables-purple.css" rel="stylesheet"> -->
-    <!-- <link href="LandingPage/assets/css/variables-red.css" rel="stylesheet"> -->
-    <!-- <link href="LandingPage/assets/css/variables-pink.css" rel="stylesheet"> -->
+    <link href="assets/css/variables.css" rel="stylesheet">
+    <!-- <link href="assets/css/variables-blue.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/variables-green.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/variables-orange.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/variables-purple.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/variables-red.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/variables-pink.css" rel="stylesheet"> -->
 
     <!-- Template Main CSS File -->
-    <link href="LandingPage/assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
 </head>
 
 <body class="antialiased">
@@ -55,7 +55,7 @@
 
             <a href="#" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
                 <!-- Uncomment the line below if you also wish to use an image logo -->
-                <!-- <img src="LandingPage/assets/img/logo.png" alt=""> -->
+                <!-- <img src="assets/img/logo.png" alt=""> -->
                 <h1>ENI-Share<span>.</span></h1>
             </a>
 
@@ -95,7 +95,7 @@
                     <div class="row justify-content-center gy-6">
 
                         <div class="col-lg-5 col-md-8">
-                            <img src="LandingPage/assets/img/hero-carousel/hero-carousel-1.svg" alt="" class="img-fluid img">
+                            <img src="assets/img/hero-carousel/hero-carousel-1.svg" alt="" class="img-fluid img">
                         </div>
 
                         <div class="col-lg-9 text-center">
@@ -113,7 +113,7 @@
                     <div class="row justify-content-center gy-6">
 
                         <div class="col-lg-5 col-md-8">
-                            <img src="LandingPage/assets/img/hero-carousel/hero-carousel-2.svg" alt="" class="img-fluid img">
+                            <img src="assets/img/hero-carousel/hero-carousel-2.svg" alt="" class="img-fluid img">
                         </div>
 
                         <div class="col-lg-9 text-center">
@@ -131,7 +131,7 @@
                     <div class="row justify-content-center gy-6">
 
                         <div class="col-lg-5 col-md-8">
-                            <img src="LandingPage/assets/img/hero-carousel/hero-carousel-3.svg" alt="" class="img-fluid img">
+                            <img src="assets/img/hero-carousel/hero-carousel-3.svg" alt="" class="img-fluid img">
                         </div>
 
                         <div class="col-lg-9 text-center">
@@ -215,7 +215,7 @@
 
                     <div class="col-lg-5">
                         <div class="about-img">
-                            <img src="LandingPage/assets/img/about.jpg" class="img-fluid" alt="">
+                            <img src="assets/img/about.jpg" class="img-fluid" alt="">
                         </div>
                     </div>
 
@@ -319,14 +319,14 @@
 
                 <div class="clients-slider swiper">
                     <div class="swiper-wrapper align-items-center">
-                        <div class="swiper-slide"><img src="LandingPage/assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
-                        <div class="swiper-slide"><img src="LandingPage/assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
-                        <div class="swiper-slide"><img src="LandingPage/assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
-                        <div class="swiper-slide"><img src="LandingPage/assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
-                        <div class="swiper-slide"><img src="LandingPage/assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
-                        <div class="swiper-slide"><img src="LandingPage/assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
-                        <div class="swiper-slide"><img src="LandingPage/assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
-                        <div class="swiper-slide"><img src="LandingPage/assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
                     </div>
                 </div>
 
@@ -347,7 +347,7 @@
 
                     <div class="col-lg-4 col-md-6 order-first order-md-last d-flex align-items-center">
                         <div class="img">
-                            <img src="LandingPage/assets/img/cta.jpg" alt="" class="img-fluid">
+                            <img src="assets/img/cta.jpg" alt="" class="img-fluid">
                         </div>
                     </div>
 
@@ -428,7 +428,7 @@
                                 </p>
                             </div>
                             <div class="col-lg-4 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
-                                <img src="LandingPage/assets/img/features-1.svg" alt="" class="img-fluid">
+                                <img src="assets/img/features-1.svg" alt="" class="img-fluid">
                             </div>
                         </div>
                     </div><!-- End Tab Content 1 -->
@@ -454,7 +454,7 @@
                                 </ul>
                             </div>
                             <div class="col-lg-4 order-1 order-lg-2 text-center">
-                                <img src="LandingPage/assets/img/features-2.svg" alt="" class="img-fluid">
+                                <img src="assets/img/features-2.svg" alt="" class="img-fluid">
                             </div>
                         </div>
                     </div><!-- End Tab Content 2 -->
@@ -479,7 +479,7 @@
                                 </p>
                             </div>
                             <div class="col-lg-4 order-1 order-lg-2 text-center">
-                                <img src="LandingPage/assets/img/features-3.svg" alt="" class="img-fluid">
+                                <img src="assets/img/features-3.svg" alt="" class="img-fluid">
                             </div>
                         </div>
                     </div><!-- End Tab Content 3 -->
@@ -504,7 +504,7 @@
                                 </ul>
                             </div>
                             <div class="col-lg-4 order-1 order-lg-2 text-center">
-                                <img src="LandingPage/assets/img/features-4.svg" alt="" class="img-fluid">
+                                <img src="assets/img/features-4.svg" alt="" class="img-fluid">
                             </div>
                         </div>
                     </div><!-- End Tab Content 4 -->
@@ -529,7 +529,7 @@
                                 </ul>
                             </div>
                             <div class="col-lg-4 order-1 order-lg-2 text-center">
-                                <img src="LandingPage/assets/img/features-5.svg" alt="" class="img-fluid">
+                                <img src="assets/img/features-5.svg" alt="" class="img-fluid">
                             </div>
                         </div>
                     </div><!-- End Tab Content 5 -->
@@ -554,7 +554,7 @@
                                 </ul>
                             </div>
                             <div class="col-lg-4 order-1 order-lg-2 text-center">
-                                <img src="LandingPage/assets/img/features-6.svg" alt="" class="img-fluid">
+                                <img src="assets/img/features-6.svg" alt="" class="img-fluid">
                             </div>
                         </div>
                     </div><!-- End Tab Content 6 -->
@@ -578,7 +578,7 @@
                     <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
                         <div class="service-item">
                             <div class="img">
-                                <img src="LandingPage/assets/img/services-1.jpg" class="img-fluid" alt="">
+                                <img src="assets/img/services-1.jpg" class="img-fluid" alt="">
                             </div>
                             <div class="details position-relative">
                                 <div class="icon">
@@ -595,7 +595,7 @@
                     <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
                         <div class="service-item">
                             <div class="img">
-                                <img src="LandingPage/assets/img/services-2.jpg" class="img-fluid" alt="">
+                                <img src="assets/img/services-2.jpg" class="img-fluid" alt="">
                             </div>
                             <div class="details position-relative">
                                 <div class="icon">
@@ -612,7 +612,7 @@
                     <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
                         <div class="service-item">
                             <div class="img">
-                                <img src="LandingPage/assets/img/services-3.jpg" class="img-fluid" alt="">
+                                <img src="assets/img/services-3.jpg" class="img-fluid" alt="">
                             </div>
                             <div class="details position-relative">
                                 <div class="icon">
@@ -629,7 +629,7 @@
                     <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="500">
                         <div class="service-item">
                             <div class="img">
-                                <img src="LandingPage/assets/img/services-4.jpg" class="img-fluid" alt="">
+                                <img src="assets/img/services-4.jpg" class="img-fluid" alt="">
                             </div>
                             <div class="details position-relative">
                                 <div class="icon">
@@ -647,7 +647,7 @@
                     <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="600">
                         <div class="service-item">
                             <div class="img">
-                                <img src="LandingPage/assets/img/services-5.jpg" class="img-fluid" alt="">
+                                <img src="assets/img/services-5.jpg" class="img-fluid" alt="">
                             </div>
                             <div class="details position-relative">
                                 <div class="icon">
@@ -665,7 +665,7 @@
                     <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="700">
                         <div class="service-item">
                             <div class="img">
-                                <img src="LandingPage/assets/img/services-6.jpg" class="img-fluid" alt="">
+                                <img src="assets/img/services-6.jpg" class="img-fluid" alt="">
                             </div>
                             <div class="details position-relative">
                                 <div class="icon">
@@ -777,7 +777,7 @@
 
                     </div>
 
-                    <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("LandingPage/assets/img/faq.jpg");'>&nbsp;</div>
+                    <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("assets/img/faq.jpg");'>&nbsp;</div>
                 </div>
 
             </div>
@@ -958,15 +958,15 @@
     <div id="preloader"></div>
 
     <!-- Vendor JS Files -->
-    <script src="LandingPage/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="LandingPage/assets/vendor/aos/aos.js"></script>
-    <script src="LandingPage/assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="LandingPage/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="LandingPage/assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="LandingPage/assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
 
     <!-- Template Main JS File -->
-    <script src="LandingPage/assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

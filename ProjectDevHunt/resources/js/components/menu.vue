@@ -351,30 +351,7 @@
 </template>
 
 <script>
-    // import '/public/NiceAdmin/assets/vendor/bootstrap/css/bootstrap.min.css';
-    // import '/public/NiceAdmin/assets/vendor/bootstrap-icons/bootstrap-icons.css';
-    // import '/public/NiceAdmin/assets/vendor/boxicons/css/boxicons.min.css';
-    // import '/public/NiceAdmin/assets/vendor/quill/quill.snow.css';
-    // import '/public/NiceAdmin/assets/vendor/quill/quill.bubble.css';
-    // import '/public/NiceAdmin/assets/vendor/remixicon/remixicon.css';
-    // import '/public/NiceAdmin/assets/vendor/simple-datatables/style.css';
-    // import '/public/NiceAdmin/assets/css/style.css';
 
-    // import '/public/NiceAdmin/assets/vendor/apexcharts/apexcharts.min.js';
-    // import '/public/NiceAdmin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js';
-    // import '/public/NiceAdmin/assets/vendor/chart.js/chart.umd.js';
-    // import '/public/NiceAdmin/assets/vendor/echarts/echarts.min.js';
-    // import '/public/NiceAdmin/assets/vendor/quill/quill.min.js';
-    // import '/public/NiceAdmin/assets/vendor/simple-datatables/simple-datatables.js';
-    // import '/public/NiceAdmin/assets/vendor/tinymce/tinymce.min.js';
-    // import '/public/NiceAdmin/assets/vendor/php-email-form/validate.js';
-
-    // import '/public/NiceAdmin/assets/js/main.js';
-export default{
-    setup(){
-
-    }
-}
 </script>
 
 <style>

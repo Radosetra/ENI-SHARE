@@ -9,12 +9,9 @@ use App\Http\Controllers\UserSkillController;
 use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('admin');
 });
 
-Route::get('/admin', function(){
-    return view('admin')->name('adminlogin');
-})->middleware('auth');
 
 // users
 Route::get('/users', [UserController::class, 'index']);

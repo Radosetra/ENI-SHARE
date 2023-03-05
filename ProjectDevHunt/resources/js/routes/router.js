@@ -1,19 +1,19 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import menuComponent from '../components/menu.vue'
-// import Home from "./components/Home.vue";
-// import About from "./components/About.vue";
+// import { createRouter, createWebHistory } from 'vue-router'
+// import menuComponent from '../components/'
+// // import Home from "./components/Home.vue";
+// // import About from "./components/About.vue";
 
-const routes = [
-  {
-    path: '/',
-    name: 'admin',
-    component: menuComponent,
-  },
-];
+// const routes = [
+//   {
+//     path: '/',
+//     name: 'admin',
+//     component: menuComponent,
+//   },
+// ];
 
-const router = createRouter({
-  history: createWebHistory(),
-  routes
-})
+// const router = createRouter({
+//   history: createWebHistory(),
+//   routes
+// })
 
-export default router;
+// export default router;
