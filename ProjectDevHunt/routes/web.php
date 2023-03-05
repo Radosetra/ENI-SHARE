@@ -12,6 +12,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// admin
+Route::get('/admin', function(){
+    return view('admin');
+});
 
 // users
 Route::get('/users', [UserController::class, 'index']);

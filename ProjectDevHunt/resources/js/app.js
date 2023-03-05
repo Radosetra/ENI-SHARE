@@ -6,10 +6,18 @@ import focus from '@alpinejs/focus';
 // Vue
 import {createApp} from 'vue'
 
-import App from './App.vue'
+import menuComponent from './components/menu.vue'
 
-createApp(App).mount("#app")
-// Vue end
+import router from './router';
+
+const app = createApp({});
+
+
+app.component(
+    "menu-component",menuComponent
+);
+
+
 
 
 window.Alpine = Alpine;
@@ -17,3 +25,6 @@ window.Alpine = Alpine;
 Alpine.plugin(focus);
 
 Alpine.start();
+
+app.use(router).mount("#app")
+// Vue end
