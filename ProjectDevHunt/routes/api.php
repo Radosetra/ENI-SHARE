@@ -6,43 +6,23 @@ use App\Http\Controllers\CommentController;
 use App\Http\Controllers\PublicationController;
 use App\Http\Controllers\VoteController;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "api" middleware group. Make something great!
-|
-*/
-// web.php
+//publication
+Route::get('/publications', [PublicationController::class, 'index']);
+Route::post('/publications', [PublicationController::class, 'store']);
+Route::get('/publications/{id}', [PublicationController::class, 'show']);
+Route::put('/publications/{id}', [PublicationController::class, 'update']);
+Route::delete('/publications/{id}', [PublicationController::class, 'destroy']);
+Route::post('/publications/search', [PublicationController::class, 'search']);
 
-//Publication
-// Route::get('/publications', 'PublicationController@index');
-// Route::post('/publications', 'PublicationController@store');
-// Route::get('/publications/{id}', 'PublicationController@show');
-// Route::delete('/publications/{id}', 'PublicationController@destroy');
-Route::put('/publications/{id}', [PublicationController::class, 'store']);
-Route::resource('publications', PublicationController::class);
-
-//Comment
-// Route::get('/publications/{id}/comments', 'CommentController@index');
-// Route::post('/comments', 'CommentController@store');
+// //Comment
 Route::get('/publications/{pub_id}/comments', [CommentController::class, 'index'])->name('publications.comments');
 Route::post('/comments', [CommentController::class, 'create']);
 Route::put('/comments/{com_id}', [CommentController::class, 'edit'])->middleware('auth:api');
 Route::delete('/comments/{com_id}', [CommentController::class, 'delete'])->middleware('auth:api');
 
-
-
-//Vote
+// //Vote
 Route::get('/posts/{postId}/votes', 'App\Http\Controllers\VoteController@index');
-
 Route::post('votes', [VoteController::class, 'store']);
-
-
-
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
