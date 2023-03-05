@@ -8,12 +8,13 @@ use App\Http\Controllers\PublicationTagController;
 use App\Http\Controllers\UserSkillController;
 use App\Http\Controllers\UserController;
 
-
+// Eto ny route makany dashboard
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/auth/admin', function (){
+
+Route::get('auth/admin', function(){
     return view('admin');
 })->middleware(['auth']);
 
