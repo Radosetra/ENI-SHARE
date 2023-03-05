@@ -99,7 +99,7 @@
                         </div>
 
                         <div class="col-lg-9 text-center">
-                            <h2>Bienvenu ENI-Share</h2>
+                            <h2>Bienvenue ENI-Share</h2>
                             <p>"La plateforme collaborative pour les étudiants passionnés de l'ENI".</p>
                             <a href="#featured-services" class="btn-get-started scrollto ">Get Started</a>
                         </div>
