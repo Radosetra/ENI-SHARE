@@ -22,27 +22,26 @@ class CommentController extends Controller
         ]);
     }
 
-    public function create(Request $request)
+    public function store(Request $request)
     {
         // Get data from request
-        $content = $request->input('content');
-        $user_id = $request->input('user_id');
-        $pub_id = $request->input('pub_id');
+        $request->validate([
+            'content' => 'required',
+            'user_id' => 'required',
+            'pub_id' => 'required',
+        ]);
 
         // Create new comment
         $comment = new Comment;
-        $comment->content = $content;
+        $comment->content = $request->content;
         $comment->created_at = now(); // Current date and time
-        $comment->user_id = $user_id;
-        $comment->pub_id = $pub_id;
+        $comment->user_id = $request->user_id;
+        $comment->pub_id = $request->pub_id;
+
         $comment->save();
 
         // Return success response with created comment data
-        return response()->json([
-            'status' => 'success',
-            'message' => 'Comment created successfully.',
-            'data' => $comment
-        ]);
+        return response()->json($comment, 200);
     }
 
     public function edit(Request $request, $com_id)
