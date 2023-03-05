@@ -53,7 +53,7 @@
     <header id="header" class="header fixed-top" data-scrollto-offset="0">
         <div class="container-fluid d-flex align-items-center justify-content-between">
 
-            <a href="index.html" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
+            <a href="#" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
                 <!-- Uncomment the line below if you also wish to use an image logo -->
                 <!-- <img src="LandingPage/assets/img/logo.png" alt=""> -->
                 <h1>ENI-Share<span>.</span></h1>
@@ -62,8 +62,8 @@
             <nav id="navbar" class="navbar">
                 <ul>
 
-                    <li><a class="nav-link scrollto" href="index-2.html">Home</a></li>
-                    <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
+                    <li><a class="nav-link scrollto" href="index-2.html">Acceuil</a></li>
+                    <li><a class="nav-link scrollto" href="index.html#about">A propos</a></li>
                     <li><a class="nav-link scrollto" href="index.html#services">Services</a></li>
                     <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
                 </ul>
@@ -78,7 +78,7 @@
                 <!-- @if (Route::has('register'))
                 <a href="{{ route('register') }}" class="btn-getstarted scrollto">Register</a>
                 @endif -->
-                <a href="{{ route('login') }}" class="btn-getstarted scrollto">Log in</a>
+                <a href="{{ route('login') }}" class="btn-getstarted scrollto">Connexion</a>
 
                 @endauth
             @endif
@@ -99,8 +99,8 @@
                         </div>
 
                         <div class="col-lg-9 text-center">
-                            <h2>Welcome to HeroBiz</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <h2>Bienvenu ENI-Share</h2>
+                            <p>"La plateforme collaborative pour les étudiants passionnés de l'ENI".</p>
                             <a href="#featured-services" class="btn-get-started scrollto ">Get Started</a>
                         </div>
 
@@ -117,8 +117,8 @@
                         </div>
 
                         <div class="col-lg-9 text-center">
-                            <h2>At vero eos et accusamus</h2>
-                            <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut.</p>
+                            <h2>Rejoignez la communauté ENI-Share et partagez vos connaissances en informatique</h2>
+                            <p>ENI-Share est une communauté passionnée qui permet aux étudiants de l'ENI de se connecter, élargir leurs horizons en informatique et trouver des réponses à leurs questions. </p>
                             <a href="#featured-services" class="btn-get-started scrollto ">Get Started</a>
                         </div>
 
@@ -135,8 +135,8 @@
                         </div>
 
                         <div class="col-lg-9 text-center">
-                            <h2>Temporibus autem quibusdam</h2>
-                            <p>Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt omnis iste natus error sit voluptatem accusantium.</p>
+                            <h2>Devenez un meilleur développeur avec ENI-Share</h2>
+                            <p>ENI-Share vous offre la possibilité de partager vos connaissances et de contribuer à l'amélioration collective, car ensemble, nous sommes plus forts et plus intelligents."</p>
                             <a href="#featured-services" class="btn-get-started scrollto ">Get Started</a>
                         </div>
 
@@ -168,16 +168,16 @@
                     <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out">
                         <div class="service-item position-relative">
                             <div class="icon"><i class="bi bi-activity icon"></i></div>
-                            <h4><a href="" class="stretched-link">Lorem Ipsum</a></h4>
-                            <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+                            <h4><a href="" class="stretched-link">Resolution </a></h4>
+                            <p> "ENI-Share, l'endroit où la résolution de vos problèmes informatiques devient une aventure collective.".</p>
                         </div>
                     </div><!-- End Service Item -->
 
                     <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="200">
                         <div class="service-item position-relative">
                             <div class="icon"><i class="bi bi-bounding-box-circles icon"></i></div>
-                            <h4><a href="" class="stretched-link">Sed ut perspici</a></h4>
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+                            <h4><a href="" class="stretched-link">Entraide </a></h4>
+                            <p>ENI-Share vous permet de vous connecter avec une communauté de développeurs passionnés prêts à vous aider à résoudre vos problèmes informatiques.</p>
                         </div>
                     </div><!-- End Service Item -->
 
@@ -207,8 +207,8 @@
             <div class="container" data-aos="fade-up">
 
                 <div class="section-header">
-                    <h2>About Us</h2>
-                    <p>Architecto nobis eos vel nam quidem vitae temporibus voluptates qui hic deserunt iusto omnis nam voluptas asperiores sequi tenetur dolores incidunt enim voluptatem magnam cumque fuga.</p>
+                    <h2>A Propos</h2>
+                    <p>ENI-Share est une plateforme en ligne dédiée aux étudiants de l'ENI pour encourager le partage de connaissances et de ressources spécialisées en informatique. Elle offre un environnement collaboratif où les étudiants peuvent échanger des idées, des conseils et des astuces pour améliorer leurs compétences en informatique et innover ensemble. ENI-Share vise à cultiver une communauté dynamique et passionnée qui se soutient mutuellement dans l'apprentissage de l'informatique.</p>
                 </div>
 
                 <div class="row g-4 g-lg-5" data-aos="fade-up" data-aos-delay="200">
