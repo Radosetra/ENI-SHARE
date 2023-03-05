@@ -1,18 +1,19 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import menuComponent from './components/menu.vue'
+import menuComponent from '../components/menu.vue'
 // import Home from "./components/Home.vue";
 // import About from "./components/About.vue";
 
 const routes = [
   {
-    path: '/admin',
+    path: '/',
     name: 'admin',
-    component: menuComponent
-  }
-]
+    component: menuComponent,
+  },
+];
 
 const router = createRouter({
-  history: createWebHistory()
+  history: createWebHistory(),
+  routes
 })
 
-export default router
+export default router;

@@ -8,7 +8,7 @@ import {createApp} from 'vue'
 
 import menuComponent from './components/menu.vue'
 
-import router from './router';
+import router from './routes/router.js';
 
 const app = createApp({});
 

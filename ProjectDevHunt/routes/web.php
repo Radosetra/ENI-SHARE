@@ -12,10 +12,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// admin
 Route::get('/admin', function(){
-    return view('admin');
-});
+    return view('admin')->name('adminlogin');
+})->middleware('auth');
 
 // users
 Route::get('/users', [UserController::class, 'index']);
